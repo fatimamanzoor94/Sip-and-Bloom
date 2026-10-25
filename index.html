@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIP & BLOOM | Premium Botanical Beverages & Refreshing Drinks</title>
+  <meta name="description" content="Discover refreshing sips, vibrant cold-pressed flavors, and everyday botanical joy. Handcrafted artisan iced teas, sparkling elixirs, and fresh juices.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+  
+  <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & Plus Jakarta Sans (Modern Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==============================================
+       ANNOUNCEMENT BAR
+  ============================================== -->
+  <aside class="announcement-bar" role="region" aria-label="Announcement">
+    <div class="container announcement-inner">
+      <span class="announcement-tag">Chilled Delivery</span>
+      <p class="announcement-text">
+        Complimentary cold-chain delivery nationwide on orders over <strong>Rs. 2,500</strong> &bull; Use code <span class="promo-highlight">BLOOM10</span> for 10% off
+      </p>
+      <a href="#drinks" class="announcement-link">Explore Blends &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- ==============================================
+       A. NAVIGATION BAR (STICKY & BLURRED)
+  ============================================== -->
+  <header class="header-sticky" id="mainHeader">
+    <div class="container navbar-container">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="SIP & BLOOM Homepage">
+        <span class="brand-flower-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a4 4 0 0 0-4 4c0 3 4 7 4 7s4-4 4-7a4 4 0 0 0-4-4Z"/>
+            <path d="M12 13v9"/>
+            <path d="M8 17s-3-1-3-4a3 3 0 0 1 3-3"/>
+            <path d="M16 17s3-1 3-4a3 3 0 0 0-3-3"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">SIP &amp; BLOOM</span>
+          <!-- <span class="brand-subtitle">BOTANICAL BEVERAGES</span> -->
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#featured" class="nav-link">Our Drinks</a></li>
+          <li><a href="#collections" class="nav-link">Collections</a></li>
+          <li><a href="#spotlight" class="nav-link">The Bloom Edition</a></li>
+          <li><a href="#why-us" class="nav-link">Why Us</a></li>
+          <li><a href="#our-story" class="nav-link">Our Story</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Cart & Mobile Menu Toggle) -->
+      <div class="nav-actions">
+        <!-- Cart Trigger Button -->
+        <button type="button" class="cart-trigger-btn" id="cartOpenBtn" aria-label="View shopping bag" title="Shopping Bag">
+          <svg class="cart-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+            <path d="M3 6h18"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-badge" id="cartCountBadge" aria-live="polite">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo-small">
+        <span class="brand-flower-icon">🌸</span>
+        <span class="brand-name">SIP &amp; BLOOM</span>
+      </div>
+      <button type="button" class="drawer-close-btn" id="mobileDrawerClose" aria-label="Close mobile navigation">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#hero" class="mobile-link">Home</a></li>
+      <li><a href="#featured" class="mobile-link">Our Drinks</a></li>
+      <li><a href="#collections" class="mobile-link">Collections</a></li>
+      <li><a href="#spotlight" class="mobile-link">The Bloom Edition</a></li>
+      <li><a href="#why-us" class="mobile-link">Why Us</a></li>
+      <li><a href="#our-story" class="mobile-link">Our Story</a></li>
+      <li><a href="#reviews" class="mobile-link">Customer Reviews</a></li>
+      <li><a href="#contact" class="mobile-link">Contact &amp; Parlours</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <p class="drawer-contact-line">Direct Orders &bull; <strong>+92 (21) 3587-9240</strong></p>
+      <button type="button" class="btn btn-primary btn-block" id="mobileBagOpenBtn">
+        Open Shopping Bag (<span id="mobileCartCount">0</span>)
+      </button>
+    </div>
+  </aside>
+
+  <main id="mainContent">
+
+    <!-- ==============================================
+         B. HERO SECTION
+    ============================================== -->
+    <section class="hero-section" id="hero">
+      <!-- Soft ambient organic blobs -->
+      <div class="hero-blob hero-blob-peach" aria-hidden="true"></div>
+      <div class="hero-blob hero-blob-sage" aria-hidden="true"></div>
+      <div class="hero-blob hero-blob-blush" aria-hidden="true"></div>
+
+      <div class="container hero-container">
+        
+        <!-- Hero Text Editorial Content -->
+        <div class="hero-content fade-in-up">
+          <div class="hero-eyebrow">
+            <span class="eyebrow-pill">Pure Botanical Craft</span>
+            <span class="eyebrow-sub">Cold-Pressed &bull; Naturally Inspired</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Pour Happiness Into <span class="highlight-serif">Every Moment.</span>
+          </h1>
+
+          <p class="hero-subtext">
+            Discover refreshing sips, vibrant flavors, and little moments of everyday joy.
+            Handcrafted with sun-ripened orchard fruits, living botanical distillates, and sparkling waters.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#drinks" class="btn btn-primary hero-btn">
+              Explore Our Drinks
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+            <a href="#our-story" class="btn btn-outline hero-btn">
+              Discover Our Story
+            </a>
+          </div>
+
+          <!-- Trust Badges Under CTAs -->
+          <div class="hero-trust-metrics">
+            <div class="metric-item">
+              <span class="metric-number">100%</span>
+              <span class="metric-label">Whole Living Fruits</span>
+            </div>
+            <div class="metric-divider" aria-hidden="true"></div>
+            <div class="metric-item">
+              <span class="metric-number">0g</span>
+              <span class="metric-label">Refined Cane Sugar</span>
+            </div>
+            <div class="metric-divider" aria-hidden="true"></div>
+            <div class="metric-item">
+              <span class="metric-number">4.9 ★</span>
+              <span class="metric-label">Verified Drinkers</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Photography Showcase -->
+        <div class="hero-visual fade-in-up">
+          <div class="hero-image-wrapper">
+            <div class="hero-image-card">
+              <img 
+                src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=1000&q=85" 
+                alt="Refreshing handcrafted botanical iced beverage with sliced fruit, condensation droplets and fresh mint" 
+                class="hero-main-img"
+                loading="eager"
+              >
+              <div class="hero-image-glimmer" aria-hidden="true"></div>
+            </div>
+
+            <!-- Floating Editorial Fruit & Botanical Badges -->
+            <div class="floating-badge badge-top-right float-slow">
+              <div class="badge-icon-wrap">🍓</div>
+              <div class="badge-text-wrap">
+                <span class="badge-title">Wild Strawberries</span>
+                <span class="badge-caption">Cold-extracted at sunrise</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-left float-reverse">
+              <div class="badge-icon-wrap">🌿</div>
+              <div class="badge-text-wrap">
+                <span class="badge-title">Living Botanicals</span>
+                <span class="badge-caption">Infused with organic mint &amp; rose</span>
+              </div>
+            </div>
+
+            <div class="floating-pill-tag float-mid">
+              <span class="pill-dot"></span>
+              Freshly Chilled &bull; Bottled Daily
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         C. FEATURED BEVERAGES
+    ============================================== -->
+    <section class="featured-section section-padding" id="featured">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">Seasonal Best-Sellers</span>
+          <h2 class="section-title">Featured Beverages</h2>
+          <p class="section-description">
+            Experience our four most beloved signature creations, crafted with cold-pressed natural essences, sparkling waters, and delicate botanical infusions.
+          </p>
+        </div>
+
+        <!-- 4 Premium Drink Cards Grid (Strawberry Bliss, Matcha Cloud, Peach Paradise, Blueberry Breeze) -->
+        <div class="featured-drinks-grid" id="featuredDrinksGrid">
+
+          <!-- Card 1: Strawberry Bliss -->
+          <article class="drink-card fade-in-up" data-drink-id="strawberry-bliss">
+            <div class="drink-image-container">
+              <span class="drink-badge badge-best-seller">Best Seller</span>
+              <button type="button" class="wishlist-btn" data-action="toggle-wishlist" data-id="strawberry-bliss" aria-label="Save Strawberry Bliss to favorites">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              </button>
+              <img 
+                src="https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=700&q=80" 
+                alt="Strawberry Bliss drink served with fresh strawberry slices, ice cubes and fresh garden rosemary" 
+                class="drink-card-image"
+                loading="lazy"
+              >
+              <button type="button" class="quick-view-btn" data-action="quickview" data-id="strawberry-bliss" aria-label="Quick view Strawberry Bliss">
+                Quick View
+              </button>
+            </div>
+            <div class="drink-card-content">
+              <div class="drink-card-meta">
+                <span class="drink-category-label">Sparkling Drinks</span>
+                <div class="drink-rating" aria-label="4.9 out of 5 stars">
+                  ★★★★★ <span class="rating-val">(4.9)</span>
+                </div>
+              </div>
+              <h3 class="drink-card-name">Strawberry Bliss</h3>
+              <p class="drink-card-desc">
+                Sun-ripened alpine strawberries infused with wild hibiscus petals, crisp sparkling mineral water, and garden mint.
+              </p>
+              <div class="drink-tasting-notes">
+                <span class="tasting-pill">Alpine Strawberry</span>
+                <span class="tasting-pill">Wild Hibiscus</span>
+                <span class="tasting-pill">Mint Sprig</span>
+              </div>
+              <div class="drink-card-footer">
+                <div class="drink-price-wrap">
+                  <span class="price-currency">PKR</span>
+                  <span class="price-amount">850</span>
+                </div>
+                <button 
+                  type="button" 
+                  class="btn btn-add-cart" 
+                  data-action="add-to-cart"
+                  data-id="strawberry-bliss"
+                  data-name="Strawberry Bliss"
+                  data-price="850"
+                  data-img="https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=700&q=80"
+                  data-category="Sparkling Drinks"
+                  aria-label="Add Strawberry Bliss to bag"
+                >
+                  <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+                  <span class="btn-text">Add to Cart</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Matcha Cloud -->
+          <article class="drink-card fade-in-up" data-drink-id="matcha-cloud">
+            <div class="drink-image-container">
+              <span class="drink-badge badge-trending">House Favorite</span>
+              <button type="button" class="wishlist-btn" data-action="toggle-wishlist" data-id="matcha-cloud" aria-label="Save Matcha Cloud to favorites">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              </button>
+              <img 
+                src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=700&q=80" 
+                alt="Matcha Cloud layered iced drink with ceremonial green matcha, oat milk and sweet foam" 
+                class="drink-card-image"
+                loading="lazy"
+              >
+              <button type="button" class="quick-view-btn" data-action="quickview" data-id="matcha-cloud" aria-label="Quick view Matcha Cloud">
+                Quick View
+              </button>
+            </div>
+            <div class="drink-card-content">
+              <div class="drink-card-meta">
+                <span class="drink-category-label">Matcha &amp; Coffee</span>
+                <div class="drink-rating" aria-label="5.0 out of 5 stars">
+                  ★★★★★ <span class="rating-val">(5.0)</span>
+                </div>
+              </div>
+              <h3 class="drink-card-name">Matcha Cloud</h3>
+              <p class="drink-card-desc">
+                Ceremonial grade Uji green matcha whisked over chilled oat milk, crowned with silky vanilla cold foam and wildflower honey.
+              </p>
+              <div class="drink-tasting-notes">
+                <span class="tasting-pill">Uji Matcha</span>
+                <span class="tasting-pill">Vanilla Foam</span>
+                <span class="tasting-pill">Oat Milk</span>
+              </div>
+              <div class="drink-card-footer">
+                <div class="drink-price-wrap">
+                  <span class="price-currency">PKR</span>
+                  <span class="price-amount">950</span>
+                </div>
+                <button 
+                  type="button" 
+                  class="btn btn-add-cart" 
+                  data-action="add-to-cart"
+                  data-id="matcha-cloud"
+                  data-name="Matcha Cloud"
+                  data-price="950"
+                  data-img="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=700&q=80"
+                  data-category="Matcha & Coffee"
+                  aria-label="Add Matcha Cloud to bag"
+                >
+                  <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+                  <span class="btn-text">Add to Cart</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Peach Paradise -->
+          <article class="drink-card fade-in-up" data-drink-id="peach-paradise">
+            <div class="drink-image-container">
+              <span class="drink-badge badge-seasonal">Seasonal Hit</span>
+              <button type="button" class="wishlist-btn" data-action="toggle-wishlist" data-id="peach-paradise" aria-label="Save Peach Paradise to favorites">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              </button>
+              <img 
+                src="https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&w=700&q=80" 
+                alt="Peach Paradise iced drink with fresh white peach slices and sparkling bubbles" 
+                class="drink-card-image"
+                loading="lazy"
+              >
+              <button type="button" class="quick-view-btn" data-action="quickview" data-id="peach-paradise" aria-label="Quick view Peach Paradise">
+                Quick View
+              </button>
+            </div>
+            <div class="drink-card-content">
+              <div class="drink-card-meta">
+                <span class="drink-category-label">Iced Teas</span>
+                <div class="drink-rating" aria-label="4.8 out of 5 stars">
+                  ★★★★★ <span class="rating-val">(4.8)</span>
+                </div>
+              </div>
+              <h3 class="drink-card-name">Peach Paradise</h3>
+              <p class="drink-card-desc">
+                Velvety white peach nectar steeped with loose-leaf silver jasmine tea, effervescent bubbles, and organic crushed basil seeds.
+              </p>
+              <div class="drink-tasting-notes">
+                <span class="tasting-pill">White Peach</span>
+                <span class="tasting-pill">Silver Jasmine</span>
+                <span class="tasting-pill">Basil Seeds</span>
+              </div>
+              <div class="drink-card-footer">
+                <div class="drink-price-wrap">
+                  <span class="price-currency">PKR</span>
+                  <span class="price-amount">890</span>
+                </div>
+                <button 
+                  type="button" 
+                  class="btn btn-add-cart" 
+                  data-action="add-to-cart"
+                  data-id="peach-paradise"
+                  data-name="Peach Paradise"
+                  data-price="890"
+                  data-img="https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&w=700&q=80"
+                  data-category="Iced Teas"
+                  aria-label="Add Peach Paradise to bag"
+                >
+                  <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+                  <span class="btn-text">Add to Cart</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Blueberry Breeze -->
+          <article class="drink-card fade-in-up" data-drink-id="blueberry-breeze">
+            <div class="drink-image-container">
+              <span class="drink-badge badge-new">New Release</span>
+              <button type="button" class="wishlist-btn" data-action="toggle-wishlist" data-id="blueberry-breeze" aria-label="Save Blueberry Breeze to favorites">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              </button>
+              <img 
+                src="https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=700&q=80" 
+                alt="Blueberry Breeze drink with wild blueberries, lavender botanical mist, and ice" 
+                class="drink-card-image"
+                loading="lazy"
+              >
+              <button type="button" class="quick-view-btn" data-action="quickview" data-id="blueberry-breeze" aria-label="Quick view Blueberry Breeze">
+                Quick View
+              </button>
+            </div>
+            <div class="drink-card-content">
+              <div class="drink-card-meta">
+                <span class="drink-category-label">Fresh Juices</span>
+                <div class="drink-rating" aria-label="4.9 out of 5 stars">
+                  ★★★★★ <span class="rating-val">(4.9)</span>
+                </div>
+              </div>
+              <h3 class="drink-card-name">Blueberry Breeze</h3>
+              <p class="drink-card-desc">
+                Wild antioxidant blueberries cold-pressed with French lavender mist, zesty Meyer lemon drops, and pure spring water.
+              </p>
+              <div class="drink-tasting-notes">
+                <span class="tasting-pill">Nordic Blueberry</span>
+                <span class="tasting-pill">French Lavender</span>
+                <span class="tasting-pill">Meyer Lemon</span>
+              </div>
+              <div class="drink-card-footer">
+                <div class="drink-price-wrap">
+                  <span class="price-currency">PKR</span>
+                  <span class="price-amount">920</span>
+                </div>
+                <button 
+                  type="button" 
+                  class="btn btn-add-cart" 
+                  data-action="add-to-cart"
+                  data-id="blueberry-breeze"
+                  data-name="Blueberry Breeze"
+                  data-price="920"
+                  data-img="https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=700&q=80"
+                  data-category="Fresh Juices"
+                  aria-label="Add Blueberry Breeze to bag"
+                >
+                  <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+                  <span class="btn-text">Add to Cart</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         D. SHOP BY COLLECTION
+    ============================================== -->
+    <section class="collections-section section-padding bg-sage-tint" id="collections">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">Explore By Ritual</span>
+          <h2 class="section-title">Shop by Collection</h2>
+          <p class="section-description">
+            Filter by mood, energy, or botanical cravings. Click any category card to instantly discover matching artisan drinks below.
+          </p>
+        </div>
+
+        <!-- 6 Required Collection Category Visual Cards -->
+        <div class="collection-cards-grid">
+          
+          <!-- Collection 1: Fresh Juices -->
+          <div class="collection-card" data-filter-target="Fresh Juices" role="button" tabindex="0" aria-label="Filter by Fresh Juices">
+            <div class="collection-card-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&q=80" 
+                alt="Fresh Juices collection with cold-pressed citrus and fresh orchard fruits" 
+                class="collection-bg-img"
+                loading="lazy"
+              >
+              <div class="collection-overlay"></div>
+            </div>
+            <div class="collection-info">
+              <span class="collection-count">3 Artisan Blends</span>
+              <h3 class="collection-name">Fresh Juices</h3>
+              <p class="collection-tagline">100% raw, cold-pressed daily vitality</p>
+              <span class="collection-action-link">Explore Collection &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Collection 2: Iced Teas -->
+          <div class="collection-card" data-filter-target="Iced Teas" role="button" tabindex="0" aria-label="Filter by Iced Teas">
+            <div class="collection-card-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=80" 
+                alt="Iced Teas collection with steeped herbal leaves and blossoms" 
+                class="collection-bg-img"
+                loading="lazy"
+              >
+              <div class="collection-overlay"></div>
+            </div>
+            <div class="collection-info">
+              <span class="collection-count">4 Floral Infusions</span>
+              <h3 class="collection-name">Iced Teas</h3>
+              <p class="collection-tagline">Slow-steeped loose leaves &amp; botanicals</p>
+              <span class="collection-action-link">Explore Collection &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Collection 3: Matcha & Coffee -->
+          <div class="collection-card" data-filter-target="Matcha & Coffee" role="button" tabindex="0" aria-label="Filter by Matcha & Coffee">
+            <div class="collection-card-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80" 
+                alt="Matcha and coffee collection with cold brews and iced specialty lattes" 
+                class="collection-bg-img"
+                loading="lazy"
+              >
+              <div class="collection-overlay"></div>
+            </div>
+            <div class="collection-info">
+              <span class="collection-count">3 Craft Brews</span>
+              <h3 class="collection-name">Matcha &amp; Coffee</h3>
+              <p class="collection-tagline">Uji green matcha &amp; nitro cold drips</p>
+              <span class="collection-action-link">Explore Collection &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Collection 4: Smoothies -->
+          <div class="collection-card" data-filter-target="Smoothies" role="button" tabindex="0" aria-label="Filter by Smoothies">
+            <div class="collection-card-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=600&q=80" 
+                alt="Smoothies collection with blended tropical fruits and coconut cream" 
+                class="collection-bg-img"
+                loading="lazy"
+              >
+              <div class="collection-overlay"></div>
+            </div>
+            <div class="collection-info">
+              <span class="collection-count">3 Velvety Blends</span>
+              <h3 class="collection-name">Smoothies</h3>
+              <p class="collection-tagline">Silk fruit purees with adaptogens</p>
+              <span class="collection-action-link">Explore Collection &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Collection 5: Sparkling Drinks -->
+          <div class="collection-card" data-filter-target="Sparkling Drinks" role="button" tabindex="0" aria-label="Filter by Sparkling Drinks">
+            <div class="collection-card-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80" 
+                alt="Sparkling Drinks collection with bubbling botanical spritzes" 
+                class="collection-bg-img"
+                loading="lazy"
+              >
+              <div class="collection-overlay"></div>
+            </div>
+            <div class="collection-info">
+              <span class="collection-count">4 Sparkling Elixirs</span>
+              <h3 class="collection-name">Sparkling Drinks</h3>
+              <p class="collection-tagline">Micro-bubbles infused with pure essences</p>
+              <span class="collection-action-link">Explore Collection &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Collection 6: Seasonal Specials -->
+          <div class="collection-card" data-filter-target="Seasonal Specials" role="button" tabindex="0" aria-label="Filter by Seasonal Specials">
+            <div class="collection-card-img-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=600&q=80" 
+                alt="Seasonal Specials collection with limited harvest floral drinks" 
+                class="collection-bg-img"
+                loading="lazy"
+              >
+              <div class="collection-overlay"></div>
+            </div>
+            <div class="collection-info">
+              <span class="collection-count">Limited Batch</span>
+              <h3 class="collection-name">Seasonal Specials</h3>
+              <p class="collection-tagline">Harvest floral notes &amp; rare botanicals</p>
+              <span class="collection-action-link">Explore Collection &rarr;</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ==============================================
+             INTERACTIVE DRINKS CATALOG & FILTER TABS
+        ============================================== -->
+        <div class="catalog-wrapper" id="drinks">
+          <div class="catalog-filter-bar" role="tablist" aria-label="Filter drinks by collection">
+            <button type="button" class="filter-tab active" data-category="all" role="tab" aria-selected="true">
+              All Blends <span class="tab-badge" id="filterCountAll">12</span>
+            </button>
+            <button type="button" class="filter-tab" data-category="Fresh Juices" role="tab" aria-selected="false">
+              Fresh Juices
+            </button>
+            <button type="button" class="filter-tab" data-category="Iced Teas" role="tab" aria-selected="false">
+              Iced Teas
+            </button>
+            <button type="button" class="filter-tab" data-category="Matcha & Coffee" role="tab" aria-selected="false">
+              Matcha &amp; Coffee
+            </button>
+            <button type="button" class="filter-tab" data-category="Smoothies" role="tab" aria-selected="false">
+              Smoothies
+            </button>
+            <button type="button" class="filter-tab" data-category="Sparkling Drinks" role="tab" aria-selected="false">
+              Sparkling Drinks
+            </button>
+            <button type="button" class="filter-tab" data-category="Seasonal Specials" role="tab" aria-selected="false">
+              Seasonal Specials
+            </button>
+          </div>
+
+          <div class="catalog-status-bar">
+            <span class="catalog-status-text" id="catalogStatusText">Showing all 12 artisan botanical drinks</span>
+          </div>
+
+          <!-- Dynamic Filterable Drink Grid -->
+          <div class="interactive-drinks-grid" id="interactiveDrinkGrid">
+
+            <!-- Item 1: Strawberry Bliss -->
+            <article class="drink-card catalog-card" data-category="Sparkling Drinks Seasonal Specials" data-id="strawberry-bliss">
+              <div class="drink-image-container">
+                <span class="drink-badge badge-best-seller">Best Seller</span>
+                <button type="button" class="wishlist-btn" data-action="toggle-wishlist" data-id="strawberry-bliss" aria-label="Save Strawberry Bliss to favorites">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=700&q=80" alt="Strawberry Bliss" class="drink-card-image" loading="lazy">
+                <button type="button" class="quick-view-btn" data-action="quickview" data-id="strawberry-bliss">Quick View</button>
+              </div>
+              <div class="drink-card-content">
+                <div class="drink-card-meta"><span class="drink-category-label">Sparkling Drinks</span><span class="drink-rating">★★★★★ (4.9)</span></div>
+                <h3 class="drink-card-name">Strawberry Bliss</h3>
+                <p class="drink-card-desc">Wild strawberry, hibiscus infusion, sparkling mineral water, garden mint &amp; lime zest.</p>
+                <div class="drink-tasting-notes">
+                  <span class="tasting-pill">Strawberry</span>
+                  <span class="tasting-pill">Hibiscus</span>
+                  <span class="tasting-pill">Mint</span>
+                </div>
+                <div class="drink-card-footer">
+                  <div class="drink-price-wrap"><span class="price-currency">PKR</span><span class="price-amount">850</span></div>
+                  <button type="button" class="btn btn-add-cart" data-action="add-to-cart" data-id="strawberry-bliss" data-name="Strawberry Bliss" data-price="850" data-img="https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=700&q=80">
+                    <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+                    <span class="btn-text">Add to Cart</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 2: Matcha Cloud -->
+            <article class="drink-card catalog-card" data-category="Matcha & Coffee" data-id="matcha-cloud">
+              <div class="drink-image-container">
+                <span class="drink-badge badge-trending">House Favorite</span>
+                <button type="button" class="wishlist-btn" data-action="toggle-wishlist" data-id="matcha-cloud" aria-label="Save Matcha Cloud to favorites">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=700&q=80" alt="Matcha Cloud" class="drink-card-image" loading="lazy">
+                <button type="button" class="quick-view-btn" data-action="quickview" data-id="matcha-cloud">Quick View</button>
+              </div>
+              <div class="drink-card-content">
+                <div class="drink-card-meta"><span class="drink-category-label">Matcha &amp; Coffee</span><span class="drink-rating">★★★★★ (5.0)</span></div>
+                <h3 class="drink-card-name">Matcha Cloud</h3>
+                <p class="drink-card-desc">Ceremonial grade Uji matcha, silky oat milk, whipped sweet vanilla foam, honey drizzle.</p>
+                <div class="drink-tasting-notes">
+                  <span class="tasting-pill">Uji Matcha</span>
+                  <span class="tasting-pill">Cold Foam</span>
+                  <span class="tasting-pill">Honey</span>
+                </div>
+                <div class="drink-card-footer">
+                  <div class="drink-price-wrap"><span class="price-currency">PKR</span><span class="price-amount">950</span></div>
+                  <button type="button" class="btn btn-add-cart" data-action="add-to-cart" data-id="matcha-cloud" data-name="Matcha Cloud" data-price="950" data-img="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=700&q=80">
+                    <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+                    <span class="btn-text">Add to Cart</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 3: Peach Paradise -->
+            <article class="drink-card catalog-card" data-category="Iced Teas Seasonal Specials" data-id="peach-paradise">
+              <div class="drink-image-container">
+                <span class="drink-badge badge-seasonal">Seasonal Hit</span>
+                <button type="button" class="wishlist-btn" data-action="toggle-wishlist" data-id="peach-paradise" aria-label="Save Peach Paradise to favorites">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&w=700&q=80" alt="Peach Paradise" class="drink-card-image" loading="lazy">
+                <button type="button" class="quick-view-btn" data-action="quickview" data-id="peach-paradise">Quick View</button>
+              </div>
+              <div class="drink-card-content">
+                <div class="drink-card-meta"><span class="drink-category-label">Iced Teas</span><span class="drink-rating">★★★★★ (4.8)</span></div>
+                <h3 class="drink-card-name">Peach Paradise</h3>
+                <p class="drink-card-desc">White peach nectar, loose-leaf silver jasmine tea, sparkling bubbles, basil seeds.</p>
+                <div class="drink-tasting-notes">
+                  <span class="tasting-pill">White Peach</span>
+                  <span class="tasting-pill">Jasmine</span>
+                  <span class="tasting-pill">Bubbles</span>
+                </div>
+                <div class="drink-card-footer">
+                  <div class="drink-price-wrap"><span class="price-currency">PKR</span><span class="price-amount">890</span></div>
+                  <button type="button" class="btn btn-add-cart" data-action="add-to-cart" data-id="peach-paradise" data-name="Peach Paradise" data-price="890" data-img="https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&w=700&q=80">
+                    <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+                    <span class="btn-text">Add to Cart</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 4: Blueberry Breeze -->
+            <article class="drink-card catalog-card" data-category="Fresh Juices" data-id="blueberry-breeze">
+              <div class="drink-image-container">
+                <span class="drink-badge badge-new">New Release</span>
+                <button type="button" class="wishlist-btn" data-action="toggle-wishlist" data-id="blueberry-breeze" aria-label="Save Blueberry Breeze to favorites">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=700&q=80" alt="Blueberry Breeze" class="drink-card-image" loading="lazy">
+                <button type="button" class="quick-view-btn" data-action="quickview" data-id="blueberry-breeze">Quick View</button>
+              </div>
+              <div class="drink-card-content">
+                <div class="drink-card-meta"><span class="drink-category-label">Fresh Juices</span><span class="drink-rating">★★★★★ (4.9)</span></div>
+                <h3 class="drink-card-name">Blueberry Breeze</h3>
+                <p class="drink-card-desc">Cold-pressed Nordic blueberries, French lavender botanical extract, Meyer lemon juice.</p>
+                <div class="drink-tasting-notes">
+                  <span class="tasting-pill">Blueberry</span>
+                  <span class="tasting-pill">Lavender</span>
+                  <span class="tasting-pill">Meyer Lemon</span>
+                </div>
+                <div class="drink-card-footer">
+                  <div class="drink-price-wrap"><span class="price-currency">PKR</span><span class="price-amount">920</span></div>
+                  <button type="button" class="btn btn-add-cart" data-action="add-to-cart" data-id="blueberry-breeze" data-name="Blueberry Breeze" data-price="920" data-img="https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=700&q=80">
+                    <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+                    <span class="btn-text">Add to Cart</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 5: Citrus Sunrise Pressed Juice -->
+            <article class="drink-card catalog-card" data-category="Fresh Juices" data-id="citrus-sunrise">
+              <div class="drink-image-container">
+                <button type="button" class="wishlist-btn" data-action="toggle-wishlist" data-id="citrus-sunrise" aria-label="Save Citrus Sunrise to favorites">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=700&q=80" alt="Citrus Sunrise" class="drink-card-image" loading="lazy">
+                <button type="button" class="quick-view-btn" data-action="quickview" data-id="citrus-sunrise">Quick View</button>
+              </div>
+              <div class="drink-card-content">
+                <div class="drink-card-meta"><span class="drink-category-label">Fresh Juices</span><span class="drink-rating">★★★★★ (4.8)</span></div>
+                <h3 class="drink-card-name">Citrus Sunrise</h3>
+                <p class="drink-card-desc">Freshly squeezed blood orange, golden turmeric root, ginger tonic &amp; crisp green apple.</p>
+                <div class="drink-tasting-notes">
+                  <span class="tasting-pill">Blood Orange</span>
+                  <span class="tasting-pill">Turmeric</span>
+                  <span class="tasting-pill">Ginger</span>
+                </div>
+                <div class="drink-card-footer">
+                  <div class="drink-price-wrap"><span class="price-currency">PKR</span><span class="price-amount">790</span></div>
+                  <button type="button" class="btn btn-add-cart" data-action="add-to-cart" data-id="citrus-sunrise" data-name="Citrus Sunrise" data-price="790" data-img="https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=700&q=80">
+                    <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+                    <span class="btn-text">Add to Cart</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 6: Jasmine Honeydew Cooler -->
+            <article class="drink-card catalog-card" data-category="Iced Teas" data-id="jasmine-honeydew">
+              <div class="drink-image-container">
+                <button type="button" class="wishlist-btn" data-action="toggle-wishlist" data-id="jasmine-honeydew" aria-label="Save Jasmine Honeydew to favorites">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=700&q=80" alt="Jasmine Honeydew Cooler" class="drink-card-image" loading="lazy">
+                <button type="button" class="quick-view-btn" data-action="quickview" data-id="jasmine-honeydew">Quick View</button>
+              </div>
+              <div class="drink-card-content">
+                <div class="drink-card-meta"><span class="drink-category-label">Iced Teas</span><span class="drink-rating">★★★★★ (4.9)</span></div>
+                <h3 class="drink-card-name">Jasmine Honeydew Cooler</h3>
+                <p class="drink-card-desc">Floral dragon pearl green tea infused with ripe honeydew melon and fresh lemongrass.</p>
+                <div class="drink-tasting-notes">
+                  <span class="tasting-pill">Dragon Pearl Tea</span>
+                  <span class="tasting-pill">Honeydew</span>
+                  <span class="tasting-pill">Lemongrass</span>
+                </div>
+                <div class="drink-card-footer">
+                  <div class="drink-price-wrap"><span class="price-currency">PKR</span><span class="price-amount">860</span></div>
+                  <button type="button" class="btn btn-add-cart" data-action="add-to-cart" data-id="jasmine-honeydew" data-name="Jasmine Honeydew Cooler" data-price="860" data-img="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=700&q=80">
+                    <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+                    <span class="btn-text">Add to Cart</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 7: Rose Petal Cold Brew -->
+            <article class="drink-card catalog-card" data-category="Matcha & Coffee" data-id="rose-coldbrew">
+              <div class="drink-image-container">
+                <span class="drink-badge badge-trending">Signature</span>
+                <button type="button" class="wishlist-btn" data-action="toggle-wishlist" data-id="rose-coldbrew" aria-label="Save Rose Petal Cold Brew to favorites">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=700&q=80" alt="Rose Petal Cold Brew" class="drink-card-image" loading="lazy">
+                <button type="button" class="quick-view-btn" data-action="quickview" data-id="rose-coldbrew">Quick View</button>
+              </div>
+              <div class="drink-card-content">
+                <div class="drink-card-meta"><span class="drink-category-label">Matcha &amp; Coffee</span><span class="drink-rating">★★★★★ (4.9)</span></div>
+                <h3 class="drink-card-name">Rose Petal Cold Brew</h3>
+                <p class="drink-card-desc">24-hour slow steep Ethiopian single-origin coffee with Damascus rose hydrosol &amp; almond foam.</p>
+                <div class="drink-tasting-notes">
+                  <span class="tasting-pill">Rose Hydrosol</span>
+                  <span class="tasting-pill">Nitro Coffee</span>
+                  <span class="tasting-pill">Almond Foam</span>
+                </div>
+                <div class="drink-card-footer">
+                  <div class="drink-price-wrap"><span class="price-currency">PKR</span><span class="price-amount">980</span></div>
+                  <button type="button" class="btn btn-add-cart" data-action="add-to-cart" data-id="rose-coldbrew" data-name="Rose Petal Cold Brew" data-price="980" data-img="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=700&q=80">
+                    <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+                    <span class="btn-text">Add to Cart</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 8: Mango Golden Glow Smoothie -->
+            <article class="drink-card catalog-card" data-category="Smoothies" data-id="mango-glow">
+              <div class="drink-image-container">
+                <button type="button" class="wishlist-btn" data-action="toggle-wishlist" data-id="mango-glow" aria-label="Save Mango Golden Glow to favorites">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=700&q=80" alt="Mango Golden Glow Smoothie" class="drink-card-image" loading="lazy">
+                <button type="button" class="quick-view-btn" data-action="quickview" data-id="mango-glow">Quick View</button>
+              </div>
+              <div class="drink-card-content">
+                <div class="drink-card-meta"><span class="drink-category-label">Smoothies</span><span class="drink-rating">★★★★★ (4.8)</span></div>
+                <h3 class="drink-card-name">Mango Golden Glow</h3>
+                <p class="drink-card-desc">Sindhri mangoes blended with coconut cream, golden flax, chia seeds and passionfruit puree.</p>
+                <div class="drink-tasting-notes">
+                  <span class="tasting-pill">Sindhri Mango</span>
+                  <span class="tasting-pill">Coconut Cream</span>
+                  <span class="tasting-pill">Golden Flax</span>
+                </div>
+                <div class="drink-card-footer">
+                  <div class="drink-price-wrap"><span class="price-currency">PKR</span><span class="price-amount">870</span></div>
+                  <button type="button" class="btn btn-add-cart" data-action="add-to-cart" data-id="mango-glow" data-name="Mango Golden Glow" data-price="870" data-img="https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=700&q=80">
+                    <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+                    <span class="btn-text">Add to Cart</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 9: Passionfruit Dream Smoothie -->
+            <article class="drink-card catalog-card" data-category="Smoothies" data-id="passionfruit-dream">
+              <div class="drink-image-container">
+                <button type="button" class="wishlist-btn" data-action="toggle-wishlist" data-id="passionfruit-dream" aria-label="Save Passionfruit Dream to favorites">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=700&q=80" alt="Passionfruit Dream Smoothie" class="drink-card-image" loading="lazy">
+                <button type="button" class="quick-view-btn" data-action="quickview" data-id="passionfruit-dream">Quick View</button>
+              </div>
+              <div class="drink-card-content">
+                <div class="drink-card-meta"><span class="drink-category-label">Smoothies</span><span class="drink-rating">★★★★★ (4.9)</span></div>
+                <h3 class="drink-card-name">Passionfruit Dream</h3>
+                <p class="drink-card-desc">Tart Brazilian passionfruit, frozen banana, coconut milk, and nourishing blue spirulina.</p>
+                <div class="drink-tasting-notes">
+                  <span class="tasting-pill">Passionfruit</span>
+                  <span class="tasting-pill">Coconut Milk</span>
+                  <span class="tasting-pill">Blue Spirulina</span>
+                </div>
+                <div class="drink-card-footer">
+                  <div class="drink-price-wrap"><span class="price-currency">PKR</span><span class="price-amount">940</span></div>
+                  <button type="button" class="btn btn-add-cart" data-action="add-to-cart" data-id="passionfruit-dream" data-name="Passionfruit Dream" data-price="940" data-img="https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=700&q=80">
+                    <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+                    <span class="btn-text">Add to Cart</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 10: Hibiscus Mint Fizz -->
+            <article class="drink-card catalog-card" data-category="Sparkling Drinks" data-id="hibiscus-fizz">
+              <div class="drink-image-container">
+                <button type="button" class="wishlist-btn" data-action="toggle-wishlist" data-id="hibiscus-fizz" aria-label="Save Hibiscus Mint Fizz to favorites">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&w=700&q=80" alt="Hibiscus Mint Fizz" class="drink-card-image" loading="lazy">
+                <button type="button" class="quick-view-btn" data-action="quickview" data-id="hibiscus-fizz">Quick View</button>
+              </div>
+              <div class="drink-card-content">
+                <div class="drink-card-meta"><span class="drink-category-label">Sparkling Drinks</span><span class="drink-rating">★★★★★ (4.8)</span></div>
+                <h3 class="drink-card-name">Hibiscus Mint Fizz</h3>
+                <p class="drink-card-desc">Crisp sparkling mineral tonic infused with Egyptian hibiscus blooms, spearmint &amp; lime.</p>
+                <div class="drink-tasting-notes">
+                  <span class="tasting-pill">Egyptian Hibiscus</span>
+                  <span class="tasting-pill">Spearmint</span>
+                  <span class="tasting-pill">Lime Tonic</span>
+                </div>
+                <div class="drink-card-footer">
+                  <div class="drink-price-wrap"><span class="price-currency">PKR</span><span class="price-amount">820</span></div>
+                  <button type="button" class="btn btn-add-cart" data-action="add-to-cart" data-id="hibiscus-fizz" data-name="Hibiscus Mint Fizz" data-price="820" data-img="https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&w=700&q=80">
+                    <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+                    <span class="btn-text">Add to Cart</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 11: Lavender White Tea Spritz -->
+            <article class="drink-card catalog-card" data-category="Sparkling Drinks Seasonal Specials" data-id="lavender-spritz">
+              <div class="drink-image-container">
+                <span class="drink-badge badge-seasonal">Seasonal Special</span>
+                <button type="button" class="wishlist-btn" data-action="toggle-wishlist" data-id="lavender-spritz" aria-label="Save Lavender White Tea Spritz to favorites">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=80" alt="Lavender White Tea Spritz" class="drink-card-image" loading="lazy">
+                <button type="button" class="quick-view-btn" data-action="quickview" data-id="lavender-spritz">Quick View</button>
+              </div>
+              <div class="drink-card-content">
+                <div class="drink-card-meta"><span class="drink-category-label">Seasonal Specials</span><span class="drink-rating">★★★★★ (5.0)</span></div>
+                <h3 class="drink-card-name">Lavender White Tea Spritz</h3>
+                <p class="drink-card-desc">Fujian silver needle white tea with botanical lavender blossom essence and effervescent bubbles.</p>
+                <div class="drink-tasting-notes">
+                  <span class="tasting-pill">Silver Needle Tea</span>
+                  <span class="tasting-pill">English Lavender</span>
+                  <span class="tasting-pill">Lime Zest</span>
+                </div>
+                <div class="drink-card-footer">
+                  <div class="drink-price-wrap"><span class="price-currency">PKR</span><span class="price-amount">880</span></div>
+                  <button type="button" class="btn btn-add-cart" data-action="add-to-cart" data-id="lavender-spritz" data-name="Lavender White Tea Spritz" data-price="880" data-img="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=80">
+                    <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+                    <span class="btn-text">Add to Cart</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 12: Ruby Pomegranate Elixir -->
+            <article class="drink-card catalog-card" data-category="Fresh Juices Seasonal Specials" data-id="pomegranate-elixir">
+              <div class="drink-image-container">
+                <button type="button" class="wishlist-btn" data-action="toggle-wishlist" data-id="pomegranate-elixir" aria-label="Save Ruby Pomegranate Elixir to favorites">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=700&q=80" alt="Ruby Pomegranate Elixir" class="drink-card-image" loading="lazy">
+                <button type="button" class="quick-view-btn" data-action="quickview" data-id="pomegranate-elixir">Quick View</button>
+              </div>
+              <div class="drink-card-content">
+                <div class="drink-card-meta"><span class="drink-category-label">Fresh Juices</span><span class="drink-rating">★★★★★ (4.9)</span></div>
+                <h3 class="drink-card-name">Ruby Pomegranate Elixir</h3>
+                <p class="drink-card-desc">Kandahari ruby pomegranate, cold-extracted with rosemary essence and a hint of sour cherry.</p>
+                <div class="drink-tasting-notes">
+                  <span class="tasting-pill">Ruby Pomegranate</span>
+                  <span class="tasting-pill">Sour Cherry</span>
+                  <span class="tasting-pill">Rosemary Extract</span>
+                </div>
+                <div class="drink-card-footer">
+                  <div class="drink-price-wrap"><span class="price-currency">PKR</span><span class="price-amount">910</span></div>
+                  <button type="button" class="btn btn-add-cart" data-action="add-to-cart" data-id="pomegranate-elixir" data-name="Ruby Pomegranate Elixir" data-price="910" data-img="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=700&q=80">
+                    <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+                    <span class="btn-text">Add to Cart</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         E. SIGNATURE DRINK SPOTLIGHT ("The Bloom Collection")
+    ============================================== -->
+    <section class="spotlight-section section-padding" id="spotlight">
+      <div class="container">
+        
+        <div class="spotlight-card fade-in-up">
+          <div class="spotlight-grid">
+            
+            <!-- Spotlight Editorial Content -->
+            <div class="spotlight-copy">
+              <div class="spotlight-badge">Limited Seasonal Release</div>
+              <h2 class="spotlight-title">The Bloom Collection</h2>
+              <p class="spotlight-subtitle">Strawberry &amp; White Peach Botanical Spritz</p>
+              
+              <p class="spotlight-desc">
+                An artisan harmony of garden-fresh wild strawberries and luscious white peach nectar, accented with cold-steeped elderflower and delicate effervescence. Hand-poured over crystalline ice with sprigs of fresh rosemary and citrus wheels.
+              </p>
+
+              <!-- Flavor Pyramid Breakdown -->
+              <div class="flavor-notes-grid">
+                <div class="flavor-note-card">
+                  <span class="flavor-note-step">Top Note</span>
+                  <span class="flavor-note-val">White Peach &amp; Garden Strawberry</span>
+                </div>
+                <div class="flavor-note-card">
+                  <span class="flavor-note-step">Heart Note</span>
+                  <span class="flavor-note-val">Damask Rose &amp; Wild Hibiscus</span>
+                </div>
+                <div class="flavor-note-card">
+                  <span class="flavor-note-step">Finish</span>
+                  <span class="flavor-note-val">Crisp Sparkling Mineral Bubbles</span>
+                </div>
+              </div>
+
+              <div class="spotlight-pricing">
+                <span class="spotlight-price-tag">Rs. 890 <small>per 350ml keepsake glass bottle</small></span>
+              </div>
+
+              <div class="spotlight-actions">
+                <button 
+                  type="button" 
+                  class="btn btn-primary"
+                  data-action="add-to-cart"
+                  data-id="bloom-collection"
+                  data-name="The Bloom Collection (Strawberry & Peach)"
+                  data-price="890"
+                  data-img="https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=800&q=85"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                  <span class="btn-text">Shop Collection</span>
+                </button>
+                <a href="#drinks" class="btn btn-outline" id="filterSeasonalBtn">
+                  View All Seasonal Editions
+                </a>
+              </div>
+            </div>
+
+            <!-- Spotlight Visual Presentation -->
+            <div class="spotlight-visual">
+              <div class="spotlight-img-frame">
+                <img 
+                  src="https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=900&q=85" 
+                  alt="The Bloom Collection refreshing strawberry and peach sparkling drink with condensation droplets and fresh citrus slices" 
+                  class="spotlight-img"
+                  loading="lazy"
+                >
+                <div class="spotlight-tag-overlay">
+                  <span>🌸 The Bloom Duo &bull; 100% Raw Fruit &bull; Pure Cold-Chain</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         F. WHY CHOOSE US
+    ============================================== -->
+    <section class="why-us-section section-padding" id="why-us">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">Pure Philosophy</span>
+          <h2 class="section-title">Why Choose SIP &amp; BLOOM</h2>
+          <p class="section-description">
+            We believe everyday hydration should be delicious, mindful, and visually inspiring.
+          </p>
+        </div>
+
+        <div class="why-us-grid">
+          
+          <!-- Feature 1: Fresh Ingredients -->
+          <div class="why-card fade-in-up">
+            <div class="why-icon-bubble">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+              </svg>
+            </div>
+            <h3 class="why-title">Fresh Ingredients</h3>
+            <p class="why-text">
+              Hand-picked seasonal fruits and botanical herbs pressed daily. Never heated, never pasteurized, preserving living enzymes and vibrant notes.
+            </p>
+          </div>
+
+          <!-- Feature 2: Naturally Inspired Flavors -->
+          <div class="why-card fade-in-up">
+            <div class="why-icon-bubble">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                <path d="M2 12h20"/>
+              </svg>
+            </div>
+            <h3 class="why-title">Naturally Inspired Flavors</h3>
+            <p class="why-text">
+              Real floral distillates, fresh orchard purees, and pure cold-steeped teas. Free from artificial colorings, artificial preservatives, or chemical syrups.
+            </p>
+          </div>
+
+          <!-- Feature 3: Beautifully Crafted Drinks -->
+          <div class="why-card fade-in-up">
+            <div class="why-icon-bubble">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2v20"/>
+                <path d="M18 2v20"/>
+                <path d="M6 12h12"/>
+                <path d="M8 7h8"/>
+                <path d="M8 17h8"/>
+              </svg>
+            </div>
+            <h3 class="why-title">Beautifully Crafted Drinks</h3>
+            <p class="why-text">
+              Artisan balance of layered flavors designed to elevate your senses. From velvety cold foams to gentle botanical effervescence.
+            </p>
+          </div>
+
+          <!-- Feature 4: Made for Every Moment -->
+          <div class="why-card fade-in-up">
+            <div class="why-icon-bubble">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"/>
+                <path d="M12 2v2"/>
+                <path d="M12 20v2"/>
+                <path d="m4.93 4.93 1.41 1.41"/>
+                <path d="m17.66 17.66 1.41 1.41"/>
+                <path d="M2 12h2"/>
+                <path d="M20 12h2"/>
+                <path d="m6.34 17.66-1.41 1.41"/>
+                <path d="m19.07 4.93-1.41 1.41"/>
+              </svg>
+            </div>
+            <h3 class="why-title">Made for Every Moment</h3>
+            <p class="why-text">
+              From mindful morning matcha rituals to refreshing afternoon breaks and golden-hour celebrations with friends and family.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         G. OUR STORY
+    ============================================== -->
+    <section class="story-section section-padding bg-sage-tint" id="our-story">
+      <div class="container">
+        
+        <div class="story-grid">
+          
+          <!-- Story Visual Montage -->
+          <div class="story-visual-column fade-in-up">
+            <div class="story-image-stack">
+              <div class="story-img-main">
+                <img 
+                  src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=85" 
+                  alt="SIP & BLOOM botanical kitchen with fresh citrus, mint leaves, and artisan beverage prep" 
+                  class="story-img"
+                  loading="lazy"
+                >
+              </div>
+              <div class="story-img-sub float-sub">
+                <img 
+                  src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=600&q=80" 
+                  alt="Friends sharing refreshing glasses of botanical iced drinks outdoors" 
+                  class="story-img"
+                  loading="lazy"
+                >
+              </div>
+              <div class="story-stamp-badge">
+                <span>EST. 2024</span>
+                <strong>PAKISTAN</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story Narrative Content -->
+          <div class="story-content-column fade-in-up">
+            <span class="section-tag">Our Heritage</span>
+            <h2 class="story-headline">Small Sips. <br><span class="highlight-serif">Beautiful Moments.</span></h2>
+            
+            <p class="story-paragraph lead-p">
+              SIP &amp; BLOOM began with a simple yet vibrant belief: that what you drink should delight your palate, nourish your body, and bring a feeling of celebration to an ordinary day.
+            </p>
+
+            <p class="story-paragraph">
+              Frustrated by sugary sodas, artificial syrups, and lackluster iced drinks, our founders set out to reinvent refreshment. We partnered with local orchard growers across Pakistan and sustainable tea gardens worldwide to source pure seasonal fruit, wild herbs, and slow-steeped botanicals.
+            </p>
+
+            <blockquote class="story-quote">
+              &ldquo;We celebrate fresh flavors, creativity, and everyday refreshment. Every bottle is a garden in bloom.&rdquo;
+            </blockquote>
+
+            <div class="story-badges-row">
+              <div class="story-badge-item">
+                <span class="badge-dot"></span>
+                <span>Small Batch Bottling</span>
+              </div>
+              <div class="story-badge-item">
+                <span class="badge-dot"></span>
+                <span>Eco-Friendly Glass</span>
+              </div>
+              <div class="story-badge-item">
+                <span class="badge-dot"></span>
+                <span>Zero Synthetic Preservatives</span>
+              </div>
+            </div>
+
+            <div class="story-cta">
+              <a href="#drinks" class="btn btn-primary">Taste The Difference</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         H. CUSTOMER REVIEWS
+    ============================================== -->
+    <section class="reviews-section section-padding" id="reviews">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">Real Reflections</span>
+          <h2 class="section-title">Loved by Drink Enthusiasts</h2>
+          <p class="section-description">
+            Hear from our community who traded conventional drinks for refreshing botanical moments.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+
+          <!-- Review 1 -->
+          <div class="review-card fade-in-up">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              &ldquo;The Strawberry Bliss is an absolute game-changer for hot afternoons in Lahore. It’s naturally crisp, not overly sweet, and the floral hibiscus notes are simply exquisite!&rdquo;
+            </p>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">AZ</div>
+              <div class="reviewer-info">
+                <h4 class="reviewer-name">Ayesha Zaidi</h4>
+                <span class="reviewer-location">Gulberg, Lahore &bull; Verified Drinker</span>
+                <span class="reviewed-drink">Ordered: Strawberry Bliss</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card fade-in-up">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              &ldquo;Hands down the best iced matcha in the country. The cold foam in Matcha Cloud has the dreamiest texture and the ceremonial Uji powder tastes ultra premium.&rdquo;
+            </p>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">HK</div>
+              <div class="reviewer-info">
+                <h4 class="reviewer-name">Hamza Khan</h4>
+                <span class="reviewer-location">Clifton, Karachi &bull; Verified Drinker</span>
+                <span class="reviewed-drink">Ordered: Matcha Cloud</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card fade-in-up">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              &ldquo;Peach Paradise feels like sipping luxury in a glass. The packaging is stunning, chilled delivery was right on time, and my dinner guests were completely blown away!&rdquo;
+            </p>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">SN</div>
+              <div class="reviewer-info">
+                <h4 class="reviewer-name">Sara Noor</h4>
+                <span class="reviewer-location">F-7, Islamabad &bull; Verified Drinker</span>
+                <span class="reviewed-drink">Ordered: Peach Paradise</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="demo-disclaimer-text text-center">
+          * Demonstrative customer testimonials showcasing authentic community enthusiasm for SIP &amp; BLOOM recipes.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         I. NEWSLETTER SECTION
+    ============================================== -->
+    <section class="newsletter-section section-padding bg-sage-tint" id="newsletter">
+      <div class="container">
+        
+        <div class="newsletter-card fade-in-up">
+          <div class="newsletter-content text-center">
+            <span class="newsletter-pill">The Bloom Circle</span>
+            <h2 class="newsletter-title">Stay Fresh With Us.</h2>
+            <p class="newsletter-sub">
+              Be the first to hear about seasonal limited drops, secret botanical recipes, and pop-up tastings. Plus, enjoy <strong>15% off</strong> your first order.
+            </p>
+
+            <form class="newsletter-form" id="newsletterForm" novalidate>
+              <div class="form-input-group">
+                <label for="newsletterEmail" class="sr-only">Your Email Address</label>
+                <input 
+                  type="email" 
+                  id="newsletterEmail" 
+                  name="email" 
+                  placeholder="Enter your email (e.g. ayesha@example.com)" 
+                  class="newsletter-input"
+                  required
+                >
+                <button type="submit" class="btn btn-primary btn-subscribe" id="subscribeBtn">
+                  Subscribe
+                </button>
+              </div>
+              <div class="form-message" id="newsletterFeedback" aria-live="polite"></div>
+            </form>
+
+            <p class="newsletter-microcopy">
+              We respect your quiet moments. No spam, ever. Unsubscribe with one click anytime.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         CONTACT / VISIT US HIGHLIGHT
+    ============================================== -->
+    <section class="contact-strip-section" id="contact">
+      <div class="container">
+        <div class="contact-strip-grid">
+          
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-details">
+              <h4>Flagship Bloom Parlours</h4>
+              <p>M.M. Alam Rd, Gulberg III, Lahore<br>Bukhari Commercial, DHA 6, Karachi</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">🕒</div>
+            <div class="contact-details">
+              <h4>Chilled Pouring Hours</h4>
+              <p>Monday – Sunday: 9:00 AM – 11:30 PM<br>Express chilled courier delivery daily</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">💌</div>
+            <div class="contact-details">
+              <h4>Say Hello</h4>
+              <p>hello@sipandbloom.pk<br>+92 (21) 3587-9240</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================================
+       J. FOOTER
+  ============================================== -->
+  <footer class="footer-section">
+    <div class="container footer-container">
+      
+      <!-- Footer Brand Column -->
+      <div class="footer-col brand-col">
+        <a href="#hero" class="brand-logo footer-logo">
+          <span class="brand-flower-icon">🌸</span>
+          <span class="brand-text">
+            <span class="brand-name">SIP &amp; BLOOM</span>
+            <!-- <span class="brand-subtitle">BOTANICAL BEVERAGES</span> -->
+          </span>
+        </a>
+        <p class="footer-tagline">
+          Pour happiness into every moment. Handcrafting cold-pressed juices, sparkling botanical tonics, and ceremonial teas for conscious lifestyles.
+        </p>
+        <div class="social-links-row" aria-label="Social media links">
+          <a href="#" class="social-btn" aria-label="Instagram" title="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="TikTok" title="TikTok">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Pinterest" title="Pinterest">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" x2="12" y1="8" y2="16"/><line x1="8" x2="16" y1="12" y2="12"/><circle cx="12" cy="12" r="10"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Facebook" title="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer Quick Navigation -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Navigation</h4>
+        <ul class="footer-link-list">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#featured">Our Drinks</a></li>
+          <li><a href="#collections">Curated Collections</a></li>
+          <li><a href="#spotlight">The Bloom Collection</a></li>
+          <li><a href="#our-story">Our Story</a></li>
+          <li><a href="#why-us">Why SIP &amp; BLOOM</a></li>
+          <li><a href="#reviews">Customer Stories</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Collections -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Collections</h4>
+        <ul class="footer-link-list">
+          <li><a href="#drinks" data-footer-filter="Fresh Juices">Fresh Juices</a></li>
+          <li><a href="#drinks" data-footer-filter="Iced Teas">Iced Teas</a></li>
+          <li><a href="#drinks" data-footer-filter="Matcha & Coffee">Matcha &amp; Coffee</a></li>
+          <li><a href="#drinks" data-footer-filter="Smoothies">Smoothies</a></li>
+          <li><a href="#drinks" data-footer-filter="Sparkling Drinks">Sparkling Drinks</a></li>
+          <li><a href="#drinks" data-footer-filter="Seasonal Specials">Seasonal Specials</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Contact & Hours -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Concierge &amp; Orders</h4>
+        <p class="footer-contact-text">
+          Direct Line: <strong>+92 (21) 3587-9240</strong><br>
+          Inquiries: <strong>hello@sipandbloom.pk</strong>
+        </p>
+        <div class="footer-delivery-badge">
+          <span>❄️ Chilled Temperature-Controlled Delivery</span>
+        </div>
+        <p class="footer-disclaimer">
+          Front-end showcase &bull; Demonstration purposes.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Copyright Sub-footer -->
+    <div class="sub-footer">
+      <div class="container sub-footer-inner">
+        <p>&copy; 2026 SIP &amp; BLOOM Beverages Ltd. All rights reserved.</p>
+        <div class="sub-footer-links">
+          <a href="#hero">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="#hero">Terms of Service</a>
+          <span>&bull;</span>
+          <a href="#hero">Chilled Shipping FAQ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============================================
+       CART DRAWER COMPONENT
+  ============================================== -->
+  <div class="cart-backdrop" id="cartBackdrop" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping Bag" aria-hidden="true">
+    
+    <div class="cart-header">
+      <div class="cart-header-title">
+        <h3>Your Shopping Bag</h3>
+        <span class="cart-items-count" id="cartHeaderCount">(0 items)</span>
+      </div>
+      <button type="button" class="cart-close-btn" id="cartCloseBtn" aria-label="Close bag">&times;</button>
+    </div>
+
+    <!-- Free Delivery Progress Tracker -->
+    <div class="cart-shipping-bar" id="cartShippingMeter">
+      <div class="shipping-msg" id="shippingMsg">
+        Add <strong>Rs. 2,500</strong> more for Free Chilled Delivery!
+      </div>
+      <div class="shipping-progress-track">
+        <div class="shipping-progress-fill" id="shippingProgressFill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Scroll List -->
+    <div class="cart-items-container" id="cartItemsList">
+      <!-- Items dynamically populated via JavaScript -->
+    </div>
+
+    <!-- Cart Footer & Checkout Summary -->
+    <div class="cart-footer" id="cartFooter">
+      
+      <!-- Promo Code Section -->
+      <div class="cart-promo-section">
+        <div class="promo-input-row">
+          <input type="text" id="promoInput" placeholder="Promo code (try BLOOM10)" class="promo-input">
+          <button type="button" id="applyPromoBtn" class="btn btn-promo">Apply</button>
+        </div>
+        <div id="promoFeedback" class="promo-feedback"></div>
+      </div>
+
+      <div class="cart-summary-row">
+        <span class="summary-label">Subtotal</span>
+        <span class="summary-val" id="cartSubtotal">Rs. 0</span>
+      </div>
+      <div class="cart-summary-row discount-row" id="cartDiscountRow" style="display: none;">
+        <span class="summary-label">Discount (10%)</span>
+        <span class="summary-val text-green" id="cartDiscount">- Rs. 0</span>
+      </div>
+      <div class="cart-summary-row">
+        <span class="summary-label">Chilled Delivery</span>
+        <span class="summary-val" id="cartShippingCost">Rs. 250</span>
+      </div>
+      <div class="cart-summary-total">
+        <span>Estimated Total</span>
+        <span class="total-amount" id="cartTotal">Rs. 250</span>
+      </div>
+
+      <button type="button" class="btn btn-primary btn-checkout btn-block" id="checkoutBtn">
+        Proceed to Checkout
+      </button>
+
+      <p class="cart-demo-note">
+        🔒 Demonstration checkout &bull; No actual payment processed.
+      </p>
+    </div>
+
+  </aside>
+
+  <!-- ==============================================
+       DRINK QUICK VIEW MODAL
+  ============================================== -->
+  <div class="modal-backdrop" id="quickViewBackdrop" aria-hidden="true"></div>
+  <div class="quickview-modal" id="quickViewModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <button type="button" class="modal-close-btn" id="quickViewCloseBtn" aria-label="Close details modal">&times;</button>
+    <div class="quickview-grid">
+      <div class="quickview-media">
+        <img id="qvImage" src="" alt="" class="quickview-img">
+      </div>
+      <div class="quickview-details">
+        <span class="quickview-category" id="qvCategory">Sparkling Drinks</span>
+        <h3 class="quickview-title" id="qvTitle">Drink Name</h3>
+        <div class="quickview-price" id="qvPrice">Rs. 850</div>
+        <p class="quickview-description" id="qvDesc">Drink description.</p>
+        
+        <div class="quickview-highlights">
+          <div class="highlight-box">
+            <span class="h-title">Key Botanicals</span>
+            <span class="h-sub" id="qvBotanicals">Wild Hibiscus, Mint, Lime</span>
+          </div>
+          <div class="highlight-box">
+            <span class="h-title">Temperature &amp; Craft</span>
+            <span class="h-sub" id="qvTemp">Chilled 4°C &bull; Sparkling</span>
+          </div>
+        </div>
+
+        <div class="quickview-quantity-row">
+          <label for="qvQty">Quantity:</label>
+          <div class="qty-stepper">
+            <button type="button" class="qty-btn" id="qvDecBtn" aria-label="Decrease quantity">-</button>
+            <input type="number" id="qvQty" value="1" min="1" max="24" readonly>
+            <button type="button" class="qty-btn" id="qvIncBtn" aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-primary btn-block" id="qvAddBagBtn">
+          Add to Shopping Bag
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==============================================
+       DEMO CHECKOUT CONFIRMATION MODAL
+  ============================================== -->
+  <div class="modal-backdrop" id="checkoutBackdrop" aria-hidden="true"></div>
+  <div class="checkout-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <button type="button" class="modal-close-btn" id="checkoutModalClose" aria-label="Close checkout modal">&times;</button>
+    <div class="checkout-modal-content text-center">
+      <div class="checkout-success-icon">🌸</div>
+      <h3 class="checkout-heading">Thank You for Blooming!</h3>
+      <p class="checkout-sub">
+        Your chilled artisan drinks order <strong>#SAB-<span id="orderNumber">8492</span></strong> has been received in demonstration mode!
+      </p>
+      
+      <div class="order-receipt-summary" id="orderReceiptSummary">
+        <!-- Order details populated via JS -->
+      </div>
+
+      <div class="delivery-notice-pill">
+        ❄️ Cold-chain temperature dispatch scheduled within 45 minutes
+      </div>
+
+      <button type="button" class="btn btn-primary" id="checkoutContinueShopping">
+        Continue Exploring Drinks
+      </button>
+    </div>
+  </div>
+
+  <!-- ==============================================
+       TOAST NOTIFICATION CONTAINER
+  ============================================== -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- ==============================================
+       FLOATING BACK TO TOP BUTTON
+  ============================================== -->
+  <button type="button" class="back-to-top" id="backToTopBtn" aria-label="Scroll back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m18 15-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
